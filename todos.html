@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minha Lista de Tarefas para a Reprograma</title>
+  </head>
+  <body>
+    <header>
+      <h1>Minha Lista de Tarefas Para Reprograma</h1>
+      <input type="text" name="tarefas" value="" id="tarefas" placeholder="Adicionar Novas Tarefas para reprogramar o mundo!">
+      <span onclick="adicionarTarefa()" class="botao">Adicionar</span>
+
+    </header>
+
+    <ul id="listaDeTarefas">
+      <li class="checked">Fazer a inscrição para o Processo Reprograma</li>
+      <li>Enviar o teste prático</li>
+      <li>Enviar o Vídeo</li>
+      <li>Passar para entrevista \o/</li>
+      <li>Entrar para a turma mais desejada do ano <3</li>
+      <li>Mudar o mundo!</li>
+    </ul>
+
+    <script>
+      function adicionarTarefa() {
+        var li = document.createElement("li");
+        var listaDeTarefas = document.getElementById('listaDeTarefas');
+        var primeiraLi = listaDeTarefas.firstChild;
+        var novaTarefa = document.getElementById('tarefas').value;
+        var adicionar = document.createTextNode(novaTarefa);
+        li.appendChild(adicionar);
+        listaDeTarefas.insertBefore(li, primeiraLi);
+      }
+      var lista = document.querySelector('ul');
+      lista.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+          ev.target.classList.toggle('checked');
+        }
+      }, false);
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+header {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.botao {
+  background-color: gray;
+  width: 20%;
+  padding: 9px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 10px auto 0;
+  display: inline-block;
+}
+
+.botao:hover {
+  background-color: darkgray;
+}
+
+ul {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  background-color: gray;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 14px 8px;
+  cursor: pointer;
+  color: white;
+}
+
+ul li:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+
+ul li:hover {
+  background-color: darkgray;
+}
+
+ul li.checked {
+  background-color: darkgreen;
+  color: white;
+  text-decoration: line-through;
+}
